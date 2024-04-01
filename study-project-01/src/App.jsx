@@ -1,30 +1,13 @@
-import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
 
-import Tasks from "./components/Tasks";
-import "./App.css";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  // let message = "Hello World!";
-  const [tasks, setTasks] = useState([
-    {
-      id: "1",
-      title: "Estudar Programação",
-      completed: false,
-    },
-    {
-      id: "2",
-      title: "Ler livros",
-      completed: true,
-    },
-  ]);
-
   return (
-    <>
-      <div className="container">
-        <Tasks tasks={tasks} />
-      </div>
-      ;
-    </>
+    <div>
+      <Navbar />
+      <Outlet />
+    </div>
   );
 };
 
